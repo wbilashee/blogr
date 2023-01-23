@@ -15,10 +15,18 @@ html {
 
 body {
   font-family: $ubuntu;
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 h1,
@@ -27,6 +35,96 @@ h3 {
   font-family: $overpass;
 }
 
+// Button
+button,
+.button {
+  outline: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: $ubuntu;
+  display: inline-block;
+  padding-top: 0.825rem;
+  letter-spacing: 0.25px;
+  border-radius: 1.875rem;
+  padding-bottom: 0.825rem;
+  border: 1px solid transparent;
+  transition: $transition;
+
+  @include breakpoint-up(medium) {
+    font-size: 0.9375rem;
+  }
+
+  &-light {
+    color: $lightRed;
+    background: $white;
+
+    &:hover {
+      color: $white;
+      background: $veryLightRed;
+    }
+  }
+
+  &-outline-light {
+    color: $white;
+    border: 1px solid $white;
+
+    &:hover {
+      color: $lightRed;
+      background: $white;
+    }
+  }
+}
+
+// Container
+.container {
+  margin: 0 auto;
+  max-width: 68.5rem;
+
+  &--pall {
+    padding-top: 2rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+  }
+
+  &--px {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &--py {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+// Flex
+.flex {
+  display: flex;
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+}
+
+// Grid
+.grid {
+  display: grid;
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Visibility
 .hide-for-mobile {
   @include breakpoint-down(medium) {
     display: none;

@@ -55,15 +55,102 @@ html {
 body {
   font-family: "Ubuntu", sans-serif;
 }
+body.noscroll {
+  overflow: hidden;
+}
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 h1,
 h2,
 h3 {
   font-family: "Overpass", sans-serif;
+}
+
+button,
+.button {
+  outline: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  display: inline-block;
+  padding-top: 0.825rem;
+  letter-spacing: 0.25px;
+  border-radius: 1.875rem;
+  padding-bottom: 0.825rem;
+  border: 1px solid transparent;
+  transition: all 300ms ease-in-out;
+}
+@media (min-width: 40em) {
+  button,
+.button {
+    font-size: 0.9375rem;
+  }
+}
+button-light,
+.button-light {
+  color: hsl(353deg, 100%, 62%);
+  background: hsl(0deg, 0%, 100%);
+}
+button-light:hover,
+.button-light:hover {
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(355deg, 100%, 74%);
+}
+button-outline-light,
+.button-outline-light {
+  color: hsl(0deg, 0%, 100%);
+  border: 1px solid hsl(0deg, 0%, 100%);
+}
+button-outline-light:hover,
+.button-outline-light:hover {
+  color: hsl(353deg, 100%, 62%);
+  background: hsl(0deg, 0%, 100%);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 68.5rem;
+}
+.container--pall {
+  padding-top: 2rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+.container--px {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.container--py {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+.grid-ai-c {
+  align-items: center;
 }
 
 @media (max-width: 63.9375em) {
@@ -76,4 +163,251 @@ h3 {
   .hide-for-desktop {
     display: none;
   }
+}
+
+.header {
+  height: 37.25rem;
+  position: relative;
+  border-bottom-left-radius: 6.5rem;
+  background: url("../images/bg-pattern-intro-mobile.svg") -24.375rem -20.3125rem no-repeat, linear-gradient(140deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  background-size: 385%, cover;
+}
+@media (min-width: 40em) {
+  .header {
+    height: 35.15rem;
+    background: url("../images/bg-pattern-intro-desktop.svg") -25.375rem -48.3125rem no-repeat, linear-gradient(80deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+    background-size: 260%, cover;
+  }
+}
+@media (min-width: 64em) {
+  .header {
+    border-bottom-left-radius: 5.75rem;
+    background: url("../images/bg-pattern-intro-desktop.svg") -25.5rem -78.375rem no-repeat, linear-gradient(118deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+    background-size: 220%, cover;
+  }
+}
+.header .dropdown {
+  z-index: 3;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 2.0625rem;
+  transition: all 300ms ease;
+}
+.header.open .header__toggle > span:first-child {
+  transform: rotate(45deg);
+}
+.header.open .header__toggle > span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header__toggle > span:last-child {
+  transform: rotate(-45deg);
+}
+.header nav {
+  position: relative;
+  padding-top: 3.4375rem;
+  padding-bottom: 3.4375rem;
+}
+@media (min-width: 64em) {
+  .header nav {
+    padding-top: 3.45rem;
+    padding-bottom: 3.45rem;
+  }
+}
+.header__logo {
+  height: 2.1875rem;
+  padding-left: 0;
+}
+@media (min-width: 40em) {
+  .header__logo {
+    height: 2.35rem;
+    padding-left: 0.3125rem;
+  }
+}
+.header__logo img {
+  width: 5.15rem;
+}
+@media (min-width: 40em) {
+  .header__logo img {
+    width: 5.9375rem;
+  }
+}
+.header__toggle > span {
+  width: 2rem;
+  display: block;
+  height: 0.125rem;
+  transition: all 300ms ease-in-out;
+  background-color: hsl(0deg, 0%, 100%);
+  transform-origin: 0.25rem 0.075rem;
+}
+.header__toggle > span:not(:last-child) {
+  margin-bottom: 0.375rem;
+}
+.header__links {
+  margin-right: auto;
+  margin-left: 3.75rem;
+}
+.header__links .list-item {
+  position: relative;
+  display: inline-block;
+}
+.header__links .list-item:not(:last-child) {
+  margin-right: 1.625rem;
+}
+.header__links .list-item:hover > a {
+  text-decoration: underline;
+}
+.header__links .list-item:hover img {
+  transform: rotate(180deg);
+}
+.header__links .list-item:hover .dropdown {
+  max-height: 18.75rem;
+}
+.header__links .list-item a {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.75px;
+  text-shadow: 0 0 0.5px hsl(0deg, 0%, 100%);
+}
+.header__links .list-item a img {
+  margin-left: 0.1875rem;
+  transition: all 300ms ease-in-out;
+}
+.header__links .list-item .dropdown {
+  position: absolute;
+  top: 2rem;
+  left: -1rem;
+  width: 11.25rem;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+}
+.header__links .list-item .dropdown li {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+.header__links .list-item .dropdown li a {
+  color: hsl(240deg, 10%, 16%);
+}
+.header__links .list-item .dropdown li a:hover {
+  font-weight: bold;
+}
+.header__buttons .button:first-child {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+  margin-right: 1.65rem;
+}
+.header__buttons .button:last-child {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+.header__menu {
+  position: absolute;
+  left: 50%;
+  top: 7.75rem;
+  background: hsl(0deg, 0%, 100%);
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  width: calc(100% - 3rem);
+  border-radius: 0.3125rem;
+  transform: translateX(-50%);
+  padding: 2rem 1.625rem 1.875rem;
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.header__menu .list-item:not(:last-child) {
+  padding-bottom: 1.75rem;
+}
+.header__menu .list-item:hover a {
+  color: hsl(210deg, 9%, 46%);
+}
+.header__menu .list-item:hover img {
+  transform: rotate(180deg);
+}
+.header__menu .list-item:hover .dropdown {
+  padding: 1.5rem;
+  margin-top: 1rem;
+  max-height: 18rem;
+}
+.header__menu .list-item a {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: hsl(208deg, 49%, 24%);
+}
+.header__menu .list-item a img {
+  margin-left: 0.5rem;
+  transition: all 300ms ease;
+}
+.header__menu .list-item .dropdown {
+  background: hsl(240deg, 7%, 94%);
+  border-radius: 0.3125rem;
+}
+.header__menu .list-item .dropdown li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.header__menu .list-item .dropdown a {
+  font-size: 1rem;
+}
+.header__menu hr {
+  margin-bottom: 1.75rem;
+  border: 1px solid hsl(240deg, 7%, 94%);
+}
+.header__menu .button {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+  background-image: linear-gradient(to right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+}
+.header__hero {
+  color: hsl(0deg, 0%, 100%);
+  padding: 0 2.5rem;
+  position: relative;
+  text-align: center;
+  margin-top: 3.25rem;
+  font-family: "Overpass", sans-serif;
+}
+@media (min-width: 64em) {
+  .header__hero {
+    padding: 0;
+    margin-top: 4rem;
+  }
+}
+.header__hero h1 {
+  font-weight: 400;
+  font-size: 2.225rem;
+  letter-spacing: -0.75px;
+}
+@media (min-width: 40em) {
+  .header__hero h1 {
+    font-size: 3.75rem;
+    letter-spacing: -1.5px;
+  }
+}
+.header__hero p {
+  font-weight: 200;
+  font-size: 1.075rem;
+  letter-spacing: 0.4px;
+  margin: 0.9375rem auto 2.875rem;
+}
+@media (min-width: 40em) {
+  .header__hero p {
+    font-size: 1.125rem;
+    margin: 0.75rem auto 2.625rem;
+  }
+}
+.header__hero__buttons .button:first-child {
+  margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 40em) {
+  .header__hero__buttons .button:first-child {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+}
+.header__hero__buttons .button:last-child {
+  padding-left: 1.375rem;
+  padding-right: 1.375rem;
 }/*# sourceMappingURL=style.css.map */
