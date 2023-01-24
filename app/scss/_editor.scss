@@ -1,0 +1,121 @@
+.editor {
+  position: relative;
+  margin: 6.35rem auto 15rem;
+
+  @include breakpoint-up(large) {
+    margin: 4.25rem auto 3rem;
+  }
+
+  h1 {
+    position: static;
+    left: 50%;
+    top: 4.65rem;
+    margin: 0 0 2.5rem;
+    font-size: 1.75rem;
+    text-align: center;
+    color: $veryDarkBlue;
+    letter-spacing: -1px;
+    transform: translateX(0);
+
+    @include breakpoint-up(large) {
+      margin: auto;
+      position: absolute;
+      font-size: 2.3425rem;
+      letter-spacing: -1.45px;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__container {
+    flex-direction: column;
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    flex: 0.815;
+    padding-left: 0;
+    padding-top: 2.5rem;
+
+    @include breakpoint-up(large) {
+      padding-left: 1.25rem;
+    }
+
+    @media (min-width: 77.5em) {
+      padding-left: 8.175rem;
+    }
+
+    &__wrapper {
+      width: 92.15%;
+      margin: 0 auto;
+      text-align: center;
+
+      @include breakpoint-up(large) {
+        margin: 0;
+        width: 86.25%;
+        text-align: left;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+
+        @include breakpoint-up(large) {
+          margin-bottom: 4.25rem;
+        }
+      }
+
+      h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: $veryDarkBlue;
+        letter-spacing: -0.5px;
+
+        @include breakpoint-up(large) {
+          font-size: 1.65625rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.75;
+        font-family: $overpass;
+        letter-spacing: 0.35px;
+        color: $veryDarkGrayishBlue;
+
+        @include breakpoint-up(large) {
+          font-size: 0.9375rem;
+        }
+      }
+    }
+  }
+
+  &__image {
+    flex: 0.82;
+    order: -1;
+    margin: 2.5rem 0;
+
+    @include breakpoint-up(large) {
+      order: 1;
+    }
+
+    img {
+      width: 95%;
+      margin: auto;
+      display: block;
+      transform: scale(1.15);
+
+      @include breakpoint-up(medium) {
+        transform: scale(1);
+      }
+
+      @include breakpoint-up(large) {
+        width: 145%;
+        display: inline;
+      }
+    }
+  }
+}
