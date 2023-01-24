@@ -1,0 +1,95 @@
+.tooling {
+  margin: 3.75rem 0 4.85rem;
+
+  @include breakpoint-up(large) {
+    margin: 7rem 0;
+  }
+
+  &__container {
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+
+    @include breakpoint-up(large) {
+      text-align: left;
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    flex: 0.8;
+    margin-bottom: 3.75rem;
+
+    @include breakpoint-up(large) {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 95%;
+      margin: auto;
+      display: block;
+      transform: scale(1.15);
+
+      @include breakpoint-up(medium) {
+        transform: scale(1);
+      }
+
+      @include breakpoint-up(large) {
+        width: 152%;
+        margin-left: -43.5%;
+        display: inline;
+      }
+    }
+  }
+
+  &__text {
+    flex: 1;
+    width: 85%;
+
+    @include breakpoint-up(large) {
+      width: auto;
+    }
+
+    &__wrapper {
+      width: auto;
+      margin-left: 0;
+
+      @include breakpoint-up(large) {
+        width: 65%;
+        margin-left: 5.625rem;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+
+        @include breakpoint-up(large) {
+          margin-bottom: 4.125rem;
+        }
+      }
+
+      h2 {
+        font-size: 1.75rem;
+        color: $veryDarkBlue;
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(large) {
+          font-size: 1.65625rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.75;
+        font-family: $overpass;
+        letter-spacing: 0.35px;
+        color: $veryDarkGrayishBlue;
+
+        @include breakpoint-up(large) {
+          font-size: 0.9375rem;
+        }
+      }
+    }
+  }
+}
