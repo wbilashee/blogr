@@ -536,4 +536,83 @@ button-outline-light:hover,
     width: 145%;
     display: inline;
   }
+}
+
+.infrastructure {
+  width: 100%;
+  position: relative;
+  padding: 13rem 1rem 6rem;
+  background: url("../images/bg-pattern-circles.svg") -6.875rem -14.6875rem no-repeat, linear-gradient(to bottom, hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
+  background-repeat: no-repeat;
+  background-size: 160%, cover;
+  border-top-right-radius: 6.75rem;
+  border-bottom-left-radius: 5.375rem;
+}
+@media (min-width: 64em) {
+  .infrastructure {
+    padding: 5.5rem 8.5rem 6.5rem;
+    background: url("../images/bg-pattern-circles.svg") -13.1875rem -30.5rem no-repeat, linear-gradient(to right, hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
+    background-size: 71.5%, cover;
+    border-top-right-radius: 5.75rem;
+  }
+}
+.infrastructure__wrapper {
+  flex-direction: column;
+}
+@media (min-width: 64em) {
+  .infrastructure__wrapper {
+    flex-direction: row;
+  }
+}
+.infrastructure__image {
+  flex: 1;
+}
+.infrastructure__image img {
+  position: absolute;
+  left: 0;
+  top: -11rem;
+  width: 100%;
+}
+@media (min-width: 40em) {
+  .infrastructure__image img {
+    top: -4rem;
+    left: 1.75rem;
+    width: 32.5625rem;
+  }
+}
+@media (min-width: 77.5rem) {
+  .infrastructure__image img {
+    left: 7rem;
+  }
+}
+.infrastructure__text {
+  flex: 1;
+  width: 95%;
+  margin: auto;
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .infrastructure__text {
+    width: auto;
+    text-align: left;
+    margin: 0 0 0 1.875rem;
+  }
+}
+.infrastructure__text h1 {
+  font-size: 2.25rem;
+  margin-top: 0.875rem;
+}
+.infrastructure__text p {
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.75;
+  margin-top: 1.625rem;
+  font-family: "Overpass", sans-serif;
+  letter-spacing: 0.75px;
+}
+@media (min-width: 64em) {
+  .infrastructure__text p {
+    font-size: 0.90625rem;
+  }
 }/*# sourceMappingURL=style.css.map */

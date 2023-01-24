@@ -1,0 +1,82 @@
+.infrastructure {
+  width: 100%;
+  position: relative;
+  padding: 13rem 1rem 6rem;
+  background: url("../images/bg-pattern-circles.svg") -6.875rem -14.6875rem
+      no-repeat,
+    linear-gradient(to bottom, $veryDarkGrayBlue, $veryDarkDesaturatedBlue);
+  background-repeat: no-repeat;
+  background-size: 160%, cover;
+  border-top-right-radius: 6.75rem;
+  border-bottom-left-radius: 5.375rem;
+
+  @include breakpoint-up(large) {
+    padding: 5.5rem 8.5rem 6.5rem;
+    background: url("../images/bg-pattern-circles.svg") -13.1875rem -30.5rem
+        no-repeat,
+      linear-gradient(to right, $veryDarkGrayBlue, $veryDarkDesaturatedBlue);
+    background-size: 71.5%, cover;
+    border-top-right-radius: 5.75rem;
+  }
+
+  &__wrapper {
+    flex-direction: column;
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    flex: 1;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: -11rem;
+      width: 100%;
+
+      @include breakpoint-up(medium) {
+        top: -4rem;
+        left: 1.75rem;
+        width: 32.5625rem;
+      }
+
+      @media (min-width: 77.5rem) {
+        left: 7rem;
+      }
+    }
+  }
+
+  &__text {
+    flex: 1;
+    width: 95%;
+    margin: auto;
+    color: $white;
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      width: auto;
+      text-align: left;
+      margin: 0 0 0 1.875rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      margin-top: 0.875rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 200;
+      line-height: 1.75;
+      margin-top: 1.625rem;
+      font-family: $overpass;
+      letter-spacing: 0.75px;
+
+      @include breakpoint-up(large) {
+        font-size: 0.90625rem;
+      }
+    }
+  }
+}
