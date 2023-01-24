@@ -1,0 +1,85 @@
+.footer {
+  padding: 4.5rem 0;
+  text-align: center;
+  background: $veryDarkBlackBlue;
+  border-top-right-radius: 6.25rem;
+
+  @include breakpoint-up(large) {
+    text-align: left;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+
+    @include breakpoint-up(large) {
+      grid-template-columns: 1.05fr repeat(3, 1fr);
+    }
+  }
+
+  &__logo {
+    img {
+      width: 5.9375rem;
+      margin-bottom: 3.75rem;
+
+      @include breakpoint-up(large) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__links {
+    margin-top: 0.45rem;
+    margin-bottom: 2.75rem;
+    flex-direction: column;
+
+    @include breakpoint-up(large) {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 1.125rem;
+      color: $grayishBlue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include breakpoint-up(large) {
+        font-size: 0.875rem;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+
+        @include breakpoint-up(large) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &:first-child {
+        color: $white;
+        margin-bottom: 2rem;
+
+        @include breakpoint-up(large) {
+          margin-bottom: 2.25rem;
+        }
+      }
+    }
+  }
+
+  &__attribution {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: $grayishBlue;
+
+    @include breakpoint-up(large) {
+      margin-top: 4.25rem;
+    }
+
+    a {
+      color: $grayishBlue;
+    }
+  }
+}

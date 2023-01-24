@@ -713,4 +713,87 @@ button-outline-light:hover,
   .tooling__text__wrapper p {
     font-size: 0.9375rem;
   }
+}
+
+.footer {
+  padding: 4.5rem 0;
+  text-align: center;
+  background: hsl(240deg, 10%, 16%);
+  border-top-right-radius: 6.25rem;
+}
+@media (min-width: 64em) {
+  .footer {
+    text-align: left;
+  }
+}
+.footer .container {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 64em) {
+  .footer .container {
+    grid-template-columns: 1.05fr repeat(3, 1fr);
+  }
+}
+.footer__logo img {
+  width: 5.9375rem;
+  margin-bottom: 3.75rem;
+}
+@media (min-width: 64em) {
+  .footer__logo img {
+    margin-bottom: 0;
+  }
+}
+.footer__links {
+  margin-top: 0.45rem;
+  margin-bottom: 2.75rem;
+  flex-direction: column;
+}
+@media (min-width: 64em) {
+  .footer__links {
+    margin-bottom: 0;
+  }
+}
+.footer__links a {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: hsl(240deg, 2%, 79%);
+}
+.footer__links a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 64em) {
+  .footer__links a {
+    font-size: 0.875rem;
+  }
+}
+.footer__links a:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 64em) {
+  .footer__links a:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.footer__links a:first-child {
+  color: hsl(0deg, 0%, 100%);
+  margin-bottom: 2rem;
+}
+@media (min-width: 64em) {
+  .footer__links a:first-child {
+    margin-bottom: 2.25rem;
+  }
+}
+.footer__attribution {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: hsl(240deg, 2%, 79%);
+}
+@media (min-width: 64em) {
+  .footer__attribution {
+    margin-top: 4.25rem;
+  }
+}
+.footer__attribution a {
+  color: hsl(240deg, 2%, 79%);
 }/*# sourceMappingURL=style.css.map */
