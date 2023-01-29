@@ -665,7 +665,7 @@ button-outline-light:hover,
 }
 .tooling__text {
   flex: 1;
-  width: 85%;
+  width: 92.15%;
 }
 @media (min-width: 64em) {
   .tooling__text {
@@ -755,7 +755,7 @@ button-outline-light:hover,
 }
 .footer__links a {
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 0.925rem;
   color: hsl(240deg, 2%, 79%);
 }
 .footer__links a:hover {
