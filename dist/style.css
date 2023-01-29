@@ -659,8 +659,8 @@ button-outline-light:hover,
 @media (min-width: 64em) {
   .tooling__image img {
     width: 152%;
-    margin-left: -43.5%;
     display: inline;
+    margin-left: -47.25%;
   }
 }
 .tooling__text {
